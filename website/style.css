@@ -1,0 +1,83 @@
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #e0f2fe, #fff);
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 2rem 0;
+}
+.project-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.project-card:hover { transform: translateY(-5px); }
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+.badge.beginner { background-color: #10b981; }
+.badge.intermediate { background-color: #f59e0b; }
+.badge.advanced { background-color: #ef4444; }
+
+.btn-small {
+    text-decoration: none;
+    padding: 5px 10px;
+    background: var(--primary);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.btn-small.outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
